@@ -5,7 +5,7 @@ import java.nio.file.Paths
 import java.nio.file.StandardOpenOption
 
 object Config {
-    private val config = Paths.get("config.bin")
+    private val config = Paths.get("resources", "config.bin")
 
     fun loadConfig() {
         if (Files.notExists(config)) {
