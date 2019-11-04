@@ -7,16 +7,17 @@ import java.io.InputStream
 import java.nio.file.Files
 import java.nio.file.Paths
 
-fun main(args: MutableList<String>) {
+fun main(args: Array<String>) {
     val resources = Paths.get("resources").toAbsolutePath()
     if (Files.notExists(resources)) {
         Files.createDirectories(resources)
     }
     loadConfig()
     val conn = Metasploit()
-    val debug = args.contains("debug") //testing metasploit connection and calls
+    val debug = args.contains("debug-cmd") //testing metasploit connection and calls
     if (debug) {
-        conn.load()
+        conn.load(debug = true)
+
     } else {
         val iconPath = Paths.get(resources.toString(), "icon.png")
         if (Files.notExists(iconPath)) {
