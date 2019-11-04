@@ -48,7 +48,7 @@ class Metasploit : Closeable {
             builder.redirectInput(ProcessBuilder.Redirect.PIPE)
             console = builder.start()
             //await startup
-            console?.outputStream?.write("load msgrpc ServerHost='${ip.hostAddress}' ServerPort=$port User='$username' Pass='$password'\n".toByteArray())
+            console?.outputStream?.write("load msgrpc ServerHost='${ip.hostAddress}' ServerPort=$port User='$username' Pass='$password' SSL=$ssl\n".toByteArray())
             console?.outputStream?.flush()
             //await rpc start
             connected = attemptConnect(username, password, ip, port, ssl)
