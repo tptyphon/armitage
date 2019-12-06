@@ -1,7 +1,24 @@
 # Armitage Rewrite
 
-This branch is dedicated to rewriting the armitage code in kotlin for the latest metasploit.
+- Tutorial for newbies -- 
+```
+git clone -b master https://github.com/Moocow9m/armitage.git 
+cd armitage/ 
+ant clean all
+```
 
-As a good amount of coding will be needed to replicate the armitage interface in kotlin for metasploit, it will take a good amount of my spare time. This will only be targeting the latest metasploit and backwards compatability to older versions of metasploit is unlikely. I do plan on somewhat replication the GUI and cmd in a way that it is familiar and most likely compatable with any programs made for armitage.
+- Initiate msfdb if you're running metasploit/armitage for the first time.
+```
+msfdb init 
+```
 
-Note: This will follow my [Viken](https://github.com/Moocow9m/Viken) repository as the graphics library
+- Now you can run armitage --
+``` 
+java -jar armitage.jar 
+``` 
+
+P.S. - Don't forget to add `sudo`, where asked. For more info visit the main branch.
+
+Enjoy  :) 
+
+
